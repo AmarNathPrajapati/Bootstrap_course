@@ -1,0 +1,127 @@
+<!-- Tooltip
+1.The Tooltip component is small pop-up box that appears when the user moves the mouse pointer over an element
+2.You have to add the extra javaScript for tooltip
+3.Positioning Tooltips: Use the data-bs-placement attribute to set the position of the tooltip on top, bottom, left or the right side of the element -->
+
+<!-- Popover
+1.The Popover component is similar to tooltips; it is a pop-up box that appears when the user clicks on an element. The difference is that the popover can contain much more content. 
+2.To create a popover, add the data-bs-toggle="popover" attribute to an element.
+Use the title attribute to specify the header text of the popover, and use the data-bs-content attribute to specify the text that should be displayed inside the popover's body
+3. Additional javaScript must be added after main JS file
+4.Use the data-bs-placement attribute to set the position of the popover on top, bottom, left or the right side of the element
+5.Closing Popovers: By default, the popover is closed when you click on the element again. However, you can use the data-bs-trigger="focus" attribute which will close the popover when clicking outside the element
+6.Hoverable Popover
+Tip: If you want the popover to be displayed when you move the mouse pointer over the element, use the data-bs-trigger attribute with a value of "hover"-->
+
+<!-- Toasts
+1.The toast component is like an alert box that is only shown for a couple of seconds when something happens (i.e. when the user clicks on a button, submits a form, etc.) 
+2.To create a toast, use the .toast class, and add a .toast-header and a .toast-body inside of it.
+Note: Toasts are hidden by default. Use the .show class if you want to display it. To close it, use a <button> element and add data-bs-dismiss="toast"
+3.Additional JS must be added after main js file-->
+
+<!-- Scrollspy
+Scrollspy is used to automatically update links in a navigation list based on scroll position
+1.Add data-bs-spy="scroll" to the element that should be used as the scrollable area (often this is the <body> element).
+Then add the data-bs-target attribute with a value of the id or the class name of the navigation bar (.navbar). This is to make sure that the navbar is connected with the scrollable area.
+Note that scrollable elements must match the ID of the links inside the navbar's list items (<div id="section1"> matches <a href="#section1">).
+The optional data-bs-offset attribute specifies the number of pixels to offset from top when calculating the position of scroll. This is useful when you feel that the links inside the navbar changes the active state too soon or too early when jumping to the scrollable elements. Default is 10 pixels-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#section1">Section 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section2">Section 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section3">Section 3</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div id="section1" class="container-fluid bg-success text-white" style="padding:100px 20px;">
+    <h1>Section 1</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  </div>
+  
+  <div id="section2" class="container-fluid bg-warning" style="padding:100px 20px;">
+    <h1>Section 2</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  </div>
+  
+  <div id="section3" class="container-fluid bg-secondary text-white" style="padding:100px 20px;">
+    <h1>Section 3</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  </div>
+    <button type="button" data-bs-placement="bottom" class="btn btn-primary my-2 " data-bs-toggle="tooltip" title="Hooray!">Hover over me!</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Popover Header" data-bs-content="Some content inside the popover">Toggle popover</button>
+
+    <button type="button" class="btn btn-primary" id="toastbtn">Show Toast</button>
+  
+  <div class="toast">
+    <div class="toast-header">
+      <strong class="me-auto">Toast Header</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body">
+      <p>Some text inside the toast body</p>
+    </div>
+  </div>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+    ></script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl)
+        })
+        </script>
+        <script>
+            document.getElementById("toastbtn").onclick = function() {
+              var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+              var toastList = toastElList.map(function(toastEl) {
+                return new bootstrap.Toast(toastEl)
+              })
+              toastList.forEach(toast => toast.show()) 
+            }
+            </script>
+    <!-- <script>
+        document.getElementById("toastbtn").onclick = function() {
+            var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+            var toastList = toastElList.map(function(toastEl) {
+            return new bootstrap.Toast(toastEl)
+            })
+            toastList.forEach(toast => toast.show())
+        }
+        </script> -->
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!-- Offcanvas is similar to modals, except that is often used as a sidebar navigation menu. 
+The .offcanvas class creates the offcanvas sidebar.
+1.The .offcanvas-start class positions the offcanvas, and makes it 400px wide. See examples below for more positioning classes.
+The .offcanvas-title class ensures proper margins and line-height.
+Then, add your content inside the .offcanvas-body class.
+To open the offcanvas sidebar, you must use a <button> or an <a> element that points to the id of the .offcanvas container (#demo in our example).
+To open the offcanvas sidebar with an <a> element, you can point to #demo with the href attribute, instead of data-bs-target attribute.
+2.Use the .offcanvas-start|end|top|bottom to position the offcanvas to the left, right, top or bottom of first div-->
+
+<!-- utilies/Helper Classes
+Bootstrap 5 has a lot of utility/helper classes to quickly style elements without using any CSS code
+            Border:Use the border classes to add or remove borders from an element
+1.Use .border-1 to .border-5 to change the width of the border
+2.Add a color to the border with any of the contextual border color classes such as border-primary
+3.Add rounded corners to an element with the rounded classes such as rounded rounded-*
+
+Float and Clearfix:
+1.Float an element to the right with the .float-end class or to the left with .float-start, and clear floats with the .clearfix class
+2.Float an element to the left or to the right depending on screen width, with the responsive float classes (.float-*-start|end - where * is sm (>=576px), md (>=768px), lg (>=992px), xl (>=1200px) or xxl (>=1400px))
+
+Center Align:
+Center an element with the .mx-auto class (adds margin-left and margin-right: auto)
+
+width: 
+Set the width of an element with the w-* classes (.w-25, .w-50, .w-75, .w-100, .mw-auto, .mw-100)
+
+Height
+Set the height of an element with the h-* classes (.h-25, .h-50, .h-75, .h-100, .mh-auto, .mh-100)
+
+Spacing
+Bootstrap 5 has a wide range of responsive margin and padding utility classes. They work for all breakpoints: xs (<=576px), sm (>=576px), md (>=768px), lg (>=992px), xl (>=1200px) or xxl (>=1400px)):
+The classes are used in the format: {property}{sides}-{size} for xs and {property}{sides}-{breakpoint}-{size} for sm, md, lg, xl and xxl.
+Where property is one of:
+m - sets margin
+p - sets padding
+Where sides is one of:
+t - sets margin-top or padding-top
+b - sets margin-bottom or padding-bottom
+s - sets margin-left or padding-left
+e - sets margin-right or padding-right
+x - sets both padding-left and padding-right or margin-left and margin-right
+y - sets both padding-top and padding-bottom or margin-top and margin-bottom
+blank - sets a margin or padding on all 4 sides of the element
+Where size is one of:
+0 - sets margin or padding to 0
+1 - sets margin or padding to .25rem
+2 - sets margin or padding to .5rem
+3 - sets margin or padding to 1rem
+4 - sets margin or padding to 1.5rem
+5 - sets margin or padding to 3rem
+auto - sets margin to auto
+
+Shadows
+Use the shadow-sm/lg classes to add shadows to an element
+
+Vertical Align
+Use the align- classes to change the alignment of elements (only works on inline, inline-block, inline-table and table cell elements)
+
+Visibility
+Use the .visible or .invisible classes to control the visibility of elements-->
+
+
+<!-- Flex box 
+.d-*-flex	Creates a flexbox container for different screens	
+.d-*-inline-flex	Creates an inline flexbox container for different screens	
+Direction	 	 
+.flex-*-row	Display flex items horizontally on different screens	
+.flex-*-row-reverse	Display flex items horizontally, and right-aligned, on different screens	
+.flex-*-column	Display flex items vertically on different screens	
+.flex-*-column-reverse	Display flex items vertically, with reversed order, on different screens screens	
+Justified Content	 	 
+.justify-content-*-start	Display flex items from the start (left-aligned) on different screens	
+.justify-content-*-end	Display flex items at the end (right-aligned) on different screens	
+.justify-content-*-center	Display flex items in the center of a flex container on different screens	
+.justify-content-*-between	Display flex items in "between" on different screens	
+.justify-content-*-around	Display flex items "around" on different screens	
+Fill / Equal Width	 	 
+.flex-*-fill	Force flex items into equal widths on different screens	
+Grow	 	 
+.flex-*-grow-0	Don't make the items grow on different screens	 
+.flex-*-grow-1	Make items grow on different screens	 
+Shrink	 	 
+.flex-*-shrink-0	Don't make the items shrink on diferent screens	 
+.flex-*-shrink-1	Make items shrink on different screens	 
+Order	 	 
+.order-*-0-12	Change the order from 0 to 5 on small screens	
+Wrap	 	 
+.flex-*-nowrap	Don't wrap items on different screens	
+.flex-*-wrap	Wrap items on different screens	
+.flex-*-wrap-reverse	Reverse the wrapping of items on different screens	
+Align Content	 	 
+.align-content-*-start	Align gathered items from the start on different screens	
+.align-content-*-end	Align gathered items at the end on different screens	
+.align-content-*-center	Align gathered items in the center on different screens	
+.align-content-*-around	Align gathered items "around" on different screens	
+.align-content-*-stretch	Stretch gathered items on different screens	
+Align Items	 	 
+.align-items-*-start	Align single rows of items from the start on different screens	
+.align-items-*-end	Align single rows of items at the end on different screens	
+.align-items-*-center	Align single rows of items in the center on different screens	
+.align-items-*-baseline	Align single rows of items on the baseline on different screens	
+.align-items-*-stretch	Stretch single rows of items on different screens	
+Align Self	 	 
+.align-self-*-start	Align a flex item from the start on different screens	
+.align-self-*-end	Align a flex item at the end on different screens	
+.align-self-*-center	Align a flex item in the center on different screens	
+.align-self-*-baseline	Align a flex item on the baseline on different screens	
+.align-self-*-stretch	Stretch a flex item on different screens-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+    <div class="offcanvas offcanvas-end" id="demo">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title">Heading</h1>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>Some text lorem ipsum.</p>
+          <p>Some text lorem ipsum.</p>
+          <button class="btn btn-secondary" type="button">A Button</button>
+        </div>
+      </div>
+      
+      <!-- Button to open the offcanvas sidebar -->
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+        Open Offcanvas Sidebar
+      </button>
+
+      <span class="border ">Lorem ipsum dolor sit amet.</span>
+
+<span class="border rounded-bottom border-danger">Lorem ipsum dolor sit amet.</span>
+<span class="border border-top-0">Lorem ipsum dolor sit amet.</span>
+<span class="border border-end-0">Lorem ipsum dolor sit amet.</span>
+<span class="border border-bottom-0">Lorem ipsum dolor sit amet.</span>
+<span class="border border-start-0">Lorem ipsum dolor sit amet.</span>
+<br>
+
+<span class="border-top">Lorem ipsum dolor sit amet.</span>
+<span class="border-end">Lorem ipsum dolor sit amet.</span>
+<span class="border-bottom">Lorem ipsum dolor sit amet.</span>
+<span class="border-start">Lorem ipsum dolor sit amet.</span>
+<div class="clearfix">
+    <span class="float-start">Float left</span>
+    <span class="float-end">Float right</span>
+  </div>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+    ></script>
+</body>
+</html>

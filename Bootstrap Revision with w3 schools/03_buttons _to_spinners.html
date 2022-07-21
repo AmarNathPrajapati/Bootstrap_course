@@ -1,0 +1,169 @@
+<!-- Buttons
+<button type="button" class="btn btn-secondary">Secondary</button>
+<a href="#" class="btn btn-success">Link Button</a>
+<input type="button" class="btn btn-success" value="Input Button">
+<input type="submit" class="btn btn-success" value="Submit Button">
+<input type="reset" class="btn btn-success" value="Reset Button">
+        Button Outline
+<button type="button" class="btn btn-outline-primary">Primary</button> 
+    Button Sizes
+Use the .btn-lg class for large buttons or .btn-sm class for small buttons:
+    Block Level buttons
+<div class="d-grid gap-3">
+  <button type="button" class="btn btn-primary btn-block">Full-Width Button</button>
+</div>
+    Active/Disabled Buttons
+<button type="button" class="btn btn-primary active">Active Primary</button>
+<button type="button" class="btn btn-primary" disabled>Disabled Primary</button>
+    Spinner Buttons
+You can also add "spinners" to a button, which you will learn more about in our BS5 Spinners Tutorial:Examples are below <button class="btn btn-primary">
+            <span class="spinner-border spinner-border-sm"></span>
+          </button>
+          <button class="btn btn-primary">
+            <span class="spinner-border spinner-border-sm"></span>
+            Loading..
+          </button>
+          <button class="btn btn-primary" disabled>
+            <span class="spinner-border spinner-border-sm"></span>
+            Loading..
+          </button>
+ -->
+
+<!-- Buttons Group
+div with class .btn-grouo, can join all button inside it 
+.lg and .sn can be used
+    verticle buttons groups
+add class to div .btn-group-vertical
+    dropdown buttons
+add class dropdown-toggle and data-bs-toggle = "dropdown" to button and for used clas dropdown-menu to div and dropdown-item to items.
+-->
+
+<!-- Badges
+use class badge to tag like span, bg-* can be used
+for round use class rounded-pill
+can be used inside into any tag -->
+
+<!-- Progess Bars
+A progress bar can be used to show how far a user is in a process. add .progress to div and add .progress-bar with width style inside parent div, height,lable can also be controlled
+pmc is also allowed here
+    Striped Progess Bars
+add extra .progress-bar-striped to children
+    Animated Progress Bar
+add extra .progress-bar-animated  to children
+    Multiple Progess Bar
+set width but sum must be less than 100-->
+
+<!-- Spinners
+ add .spinner-border to tag like div and use pmc
+    Growing Spinners
+  add extra .spinner-grow to div
+  .lg and .sm can be used
+  can be used inside button -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+    <div class="container mt-5">
+        <button class="btn-primary">Click</button>
+        <p class="btn-danger">Click</p>
+        <input type="submit" class="btn-dark" value="Submit">
+        <a href="#" class="btn btn-success">Link Button</a>
+        <button type="button" class="btn btn-outline-primary btn-lg">Primary</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm">secondary</button>
+        <div class="d-grid gap-3">
+            <button type="button" class="btn btn-primary btn-block">Full-Width Button</button>
+        
+            <button type="button" class="btn btn-primary btn-block disabled">Full-Width Button</button>
+        </div>
+          <button class="btn btn-primary" disabled>
+            <span class="spinner-grow spinner-grow-sm"></span>
+            Loading..
+          </button>
+    </div>
+
+    <div class="container">
+      <div class="btn-group">
+        <button class="btn btn-primary">Click</button>
+        <button class="btn btn-danger">Reset</button>
+        <button class="btn btn-success">Submit</button>
+      </div>
+      <div class="btn-group-vertical">
+        <button class="btn btn-primary">Click</button>
+        <button class="btn btn-danger">Reset</button>
+        <button class="btn btn-success">Submit</button>
+        <select name="" id="">
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+        </select>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Tablet</a>
+          <a class="dropdown-item" href="#">Smartphone</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      My name is <span class="badge bg-success">Amar Nath Prajapati</span>
+      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        I am from <span class="badge bg-primary">Jaunpur U.P.</span>
+      </h1>
+      I provide services as <span class="badge rounded-pill bg-secondary">Frontend Developer</span>
+    </div>
+    <div class="container my-5">
+      <div class="progress my-4">
+        <div class="progress-bar" style="width:50%"></div><br>
+      </div>
+      <div class="progress my-4">
+        <div class="progress-bar" style="width:50%; height:5px"></div>
+      </div>
+      <div class="progress my-4">
+        <div class="progress-bar bg-warning" style="width:50%">50%</div>
+        
+      </div>
+      <div class="progress my-4">
+        <div class="progress-bar-striped bg-warning" style="width:50%">50%</div>
+        
+      </div>
+      <div class="progress my-4 bg-info">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:50%">50%</div>
+      </div>
+    </div>
+      <div class="container progress my-4 bg-info">
+        <div class="progress-bar bg-success" style="width:40%">
+          Free Space
+        </div>
+        <div class="progress-bar bg-warning" style="width:10%">
+          Warning
+        </div>
+      </div>
+    </div>
+    <div class="container my-3">
+      <div class="spinner-border"></div>
+      <div class="spinner-border text-info"></div>
+      <button class="btn btn-primary">loading..
+        <span class="spinner-border-sm spinner-grow text-info"></span>
+      </button>
+    </div>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
